@@ -1,35 +1,11 @@
 const { prompter: ccPrompter } = require('cz-conventional-changelog')
+const { configLoader } = require('commitizen')
+const { getAuthors } = require('./authors')
+const prompter = require('./prompter')
+
+const config = configLoader.load()
+const coAuthors = getAuthors(config, process.env.CZ_CO_AUTHORS)
 
 module.exports = {
-  prompter: function(cz, commit) {
-    ccPrompter(cz, (message) => {
-      cz.prompt([
-        {
-          type: 'confirm',
-          name: 'hasCoAuthor',
-          message: 'Does this commit have co-authors?',
-          default: false,
-        },
-        {
-          type: 'checkbox',
-          name: 'coAuthors',
-          message: 'Select additional authors',
-          choices: [],
-          when(answers) {
-            return answers.hasCoAuthor
-          }
-        },
-      ])
-        .then(answers => {
-          let coAuthors = ''
-
-          if (Array.isArray(answers.coAuthors)) {
-            const coAuthorLines = answers.coAuthors.map(ca => `Co-authored-by: ${ca}`).join('\n')
-            coAuthors = `\n\n${coAuthorLines}`
-          }
-
-          commit(message + coAuthors)
-        })
-    })
-  }
+  prompter: prompter(coAuthors, ccPrompter),
 }

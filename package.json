@@ -1,20 +1,39 @@
 {
   "name": "cz-conventional-changelog-coauthors",
   "version": "1.0.0",
-  "description": "",
+  "description": "cz-conventional-changelog with co-authors prompt",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prettier": "prettier --write .",
+    "test": "node test.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "git",
+    "github",
+    "commit",
+    "commitizen",
+    "cz",
+    "cz-cli",
+    "co-authored-by"
+  ],
+  "author": "Phil Parsons",
+  "license": "MIT",
   "dependencies": {
+    "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.8"
   },
   "config": {
     "commitizen": {
       "path": "./index.js"
     }
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true
   }
 }
