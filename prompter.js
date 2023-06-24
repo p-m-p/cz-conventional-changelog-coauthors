@@ -20,9 +20,9 @@ module.exports = function (coAuthors, ccPrompter) {
       ]).then((answers) => {
         let coAuthors = ''
 
-        if (Array.isArray(answers.coAuthors)) {
+        if (Array.isArray(answers.coAuthors) && answers.coAuthors.length > 0) {
           const coAuthorLines = answers.coAuthors
-            .map((ca) => `Co-authored-by: ${ca}`)
+            .map((coAuthor) => `Co-authored-by: ${coAuthor}`)
             .join('\n')
           coAuthors = `\n\n${coAuthorLines}`
         }
