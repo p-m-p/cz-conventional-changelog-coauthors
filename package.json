@@ -1,11 +1,12 @@
 {
   "name": "cz-conventional-changelog-coauthors",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "cz-conventional-changelog with co-authors prompt",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint .",
     "prettier": "prettier --write .",
-    "test": "node test.js"
+    "semantic-release": "semantic-release"
   },
   "keywords": [
     "git",
@@ -18,12 +19,17 @@
   ],
   "author": "Phil Parsons",
   "license": "MIT",
+  "engines": {
+    "node": ">= 16"
+  },
   "dependencies": {
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0"
   },
   "devDependencies": {
-    "prettier": "^2.8.8"
+    "eslint": "^8.43.0",
+    "prettier": "^2.8.8",
+    "semantic-release": "^21.0.5"
   },
   "config": {
     "commitizen": {
@@ -31,9 +37,14 @@
     }
   },
   "prettier": {
-    "trailingComma": "all",
-    "tabWidth": 2,
+    "printWidth": 80,
     "semi": false,
-    "singleQuote": true
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "all"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/p-m-p/cz-conventional-changelog-coauthors.git"
   }
 }

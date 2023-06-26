@@ -1,4 +1,8 @@
 module.exports = function (coAuthors, ccPrompter) {
+  if (coAuthors.length === 0) {
+    return ccPrompter
+  }
+
   return function (cz, commit) {
     ccPrompter(cz, (message) => {
       cz.prompt([

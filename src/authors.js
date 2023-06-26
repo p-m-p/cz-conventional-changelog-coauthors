@@ -1,11 +1,9 @@
 module.exports = {
   getAuthors(config, envCoAuthors) {
-    const authors = []
+    let authors = []
 
     if (envCoAuthors) {
-      try {
-        authors.push(...envCoAuthors.trim().split(/\s*,\s*/))
-      } catch (ex) {}
+      authors.push(...envCoAuthors.trim().split(/\s*,\s*/))
     }
 
     if (
