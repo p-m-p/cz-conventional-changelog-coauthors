@@ -62,7 +62,7 @@ You can also install and configure the adapter globally in `~/.czrc`
 
 ### Environment variable
 
-As with the environment variables for [cz-conventional-changelog](https://github.com/commitizen/cz-conventional-changelog#environment-variables) the co-author list can be provideed in the `CZ_CO_AUTHORS` environment variable. The environment variable overrides the `defaultCoAuthors` configuration option and can be used to to populate the author list dynamically if needed.
+As with the environment variables for [cz-conventional-changelog](https://github.com/commitizen/cz-conventional-changelog#environment-variables) the co-author list can be provideed in the `CZ_CO_AUTHORS` environment variable. The environment variable overrides the `defaultCoAuthors` configuration option and can be used to populate the author list dynamically.
 
 ```sh
 export CZ_CO_AUTHORS = "Joe Bloggs <joe.bloggs@github.user>, Jane Doe <jane.doe@github.user>"
