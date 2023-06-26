@@ -1,6 +1,5 @@
 # cz-conventional-changelog-coauthors
 
-Status:
 [![npm version](https://img.shields.io/npm/v/cz-conventional-changelog-coauthors.svg?style=flat-square)](https://www.npmjs.org/package/cz-conventional-changelog-coauthors)
 
 A simple wrapper around [cz-conventional-changelog](https://github.com/commitizen/cz-conventional-changelog) to provide an addition `Co-authored-by` prompt for teams that use pair/mob programming and wish to attribute additional authors to a commit.
