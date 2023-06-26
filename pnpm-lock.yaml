@@ -9,7 +9,7 @@ dependencies:
     specifier: ^4.3.0
     version: 4.3.0
   cz-conventional-changelog:
-    specifier: ^3.3.0
+    specifier: 3.3.0
     version: 3.3.0
 
 devDependencies:

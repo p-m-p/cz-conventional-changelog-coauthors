@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "commitizen": "^4.3.0",
-    "cz-conventional-changelog": "^3.3.0"
+    "cz-conventional-changelog": "3.3.0"
   },
   "devDependencies": {
     "eslint": "^8.43.0",
