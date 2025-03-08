@@ -1,5 +1,5 @@
-const { prompter: ccPrompter } = require('cz-conventional-changelog')
 const { configLoader } = require('commitizen')
+const { prompter: ccPrompter } = require('cz-conventional-changelog')
 const { getAuthors } = require('./src/authors')
 const prompter = require('./src/prompter')
 
