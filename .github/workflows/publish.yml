@@ -2,6 +2,10 @@ name: Publish Package
 on:
   push:
     branches: [main]
+permissions:
+  contents: write
+  id-token: write
+  pull-requests: write
 jobs:
   publish:
     runs-on: ubuntu-latest
