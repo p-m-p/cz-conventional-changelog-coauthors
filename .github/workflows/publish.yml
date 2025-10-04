@@ -11,15 +11,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v5
         with:
-          node-version: '22'
+          node-version: 22
       - run: |
           git config user.name "${{ github.actor }}"
           git config user.email "${{ github.actor }}@users.noreply.github.com"
-      - run: |
-          corepack enable pnpm
-          pnpm install
+      - run: pnpm install
       - name: Publish 🚀
         run: pnpm run semantic-release
         env:
